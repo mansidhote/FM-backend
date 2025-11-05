@@ -115,7 +115,7 @@ app = FastAPI(title="Personal Finance Mentor API")
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Add your frontend URL
+    allow_origins=["http://localhost:3000","https://fm-backend-oajp.onrender.com/"],  # Add your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -132,10 +132,13 @@ else:
         
         # Try different model names that are currently available
         model_names = [
-            'gemini-1.5-flash',
-            'gemini-1.5-pro',
+            'gemini-2.5-flash',
+            'gemini-2.5-pro',
             'gemini-1.0-pro'
         ]
+
+        # for m in genai.list_models():
+        #     print(m.name)
         
         model = None
         for model_name in model_names:
