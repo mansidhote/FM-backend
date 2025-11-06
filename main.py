@@ -115,7 +115,7 @@ app = FastAPI(title="Personal Finance Mentor API")
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000","https://finance-mentor-frontend.vercel.app/"],  # Add your frontend URL
+    allow_origins=["http://localhost:3000","https://finance-mentor-frontend.vercel.app"],  # Add your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
